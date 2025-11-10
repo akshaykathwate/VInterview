@@ -1,6 +1,7 @@
 import express from "express";
-import {ENV} from "./lib/env.js";
 import path from "path";
+import { connectDB } from "./lib/db.js";
+import { ENV } from "./lib/env.js";
 
 const app = express();
 const __dirname = path.resolve();
@@ -21,6 +22,13 @@ if (ENV.NODE_ENV === "production") {
   });
 }
 
-app.listen(ENV.PORT || 4000,()=>{
-  console.log(`server started on ${ENV.PORT}`);
-})
+const startServer = async () => {
+  try {
+    await connectDB;
+    app.listen(ENV.PORT || 4000, () => {
+      console.log(`server started on ${ENV.PORT}`);
+    });
+  } catch (error) {
+    console.log("Error in starting the Server");
+  }
+};
