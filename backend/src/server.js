@@ -12,6 +12,7 @@ const __dirname = path.resolve();
 // Middleware
 app.use(express.json());
 app.use(cors({ origin: ENV.CLIENT_URL, credentials: true }));
+
 app.use("/app/inngest", serve({ client: inngest, functions }));
 
 app.get("/health", (req, res) => {
