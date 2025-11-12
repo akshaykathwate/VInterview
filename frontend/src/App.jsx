@@ -3,12 +3,13 @@ import { Toaster } from "react-hot-toast";
 import { Navigate, Route, Routes } from "react-router";
 import DashBoard from "./pages/DashBoard";
 import HomePage from "./pages/HomePage";
+import ProblemPage from "./pages/ProblemPage";
 import ProblemsPage from "./pages/ProblemsPage";
 
 function App() {
-  const { isSignedIn,isLoaded } = useUser(); 
+  const { isSignedIn, isLoaded } = useUser();
 
-  if(!isLoaded) return null;
+  if (!isLoaded) return null;
 
   return (
     <>
@@ -24,6 +25,10 @@ function App() {
         <Route
           path="/problems"
           element={isSignedIn ? <ProblemsPage /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/problems/:id"
+          element={isSignedIn ? <ProblemPage /> : <Navigate to="/" />}
         />
       </Routes>
 
