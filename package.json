@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/akshaykathwate/VInterview#readme",
   "dependencies": {
+    "@clerk/express": "^1.7.48",
     "stream-chat": "^9.24.0"
   }
 }
