@@ -8,6 +8,7 @@ import { ENV } from "./lib/env.js";
 import { functions, inngest } from "./lib/inngest.js";
 import chatRoutes from "./Routes/chatRoutes.js";
 import { streamClient } from "./lib/stream.js";
+import sessionRoute from "./Routes/sessionRoute.js"
 
 const app = express();
 const __dirname = path.resolve();

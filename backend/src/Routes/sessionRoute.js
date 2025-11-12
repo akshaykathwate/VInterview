@@ -6,7 +6,7 @@ import {
   getMyRecentSessions,
   getSessionById,
   joinSession,
-} from "../controllers/sessionController.js";
+} from "../controller/sessionController.js";
 import { protectRoute } from "../middleware/protectRoute.js";
 
 const router = express.Router();
