@@ -2,7 +2,7 @@ import { requireAuth } from "@clerk/express";
 
 export const protectRoute = [
   requireAuth(),
-  async (req, res, auth) => {
+  async (req, res, next) => {
     try {
       const clarkId = req.auth().usedId;
       if (!clarkId)
