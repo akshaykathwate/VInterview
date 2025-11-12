@@ -7,6 +7,7 @@ import { connectDB } from "./lib/db.js";
 import { ENV } from "./lib/env.js";
 import { functions, inngest } from "./lib/inngest.js";
 import chatRoutes from "./Routes/chatRoutes.js";
+import { streamClient } from "./lib/stream.js";
 
 const app = express();
 const __dirname = path.resolve();
@@ -15,15 +16,16 @@ const __dirname = path.resolve();
 app.use(express.json());
 app.use(cors({ origin: ENV.CLIENT_URL, credentials: true }));
 
-app.use("/app/inngest", serve({ client: inngest, functions }));
-
 app.use(clerkMiddleware());
+app.use("/app/inngest", serve({ client: inngest, functions }));
+app.use("/api/chat", chatRoutes);
+app.use("/api/session",sessionRoute)
+
 app.get("/run", (req, res) => {
   res.status(200).json({ msg: "api is running endpoint" });
 });
 
 // Chat Routes
-app.use("/api/chat", chatRoutes);
 
 if (ENV.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
