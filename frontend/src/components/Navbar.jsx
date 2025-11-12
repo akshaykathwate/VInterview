@@ -39,7 +39,6 @@ function Navbar() {
                   ? "bg-primary text-primary-content"
                   : "hover:bg-base-200 text-base-content/70 hover:text-base-content"
               }
-              
               `}
           >
             <div className="flex items-center gap-x-2.5">
