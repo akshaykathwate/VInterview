@@ -1,3 +1,6 @@
+import javaIcon from "../assets/java.png";
+import jsIcon from "../assets/javascript.png";
+import pyIcon from "../assets/python.png";
 
 export const PROBLEMS = {
   "two-sum": {
@@ -352,17 +355,17 @@ print(maxArea([1,1]))  # Expected: 1`,
 export const LANGUAGE_CONFIG = {
   javascript: {
     name: "JavaScript",
-    icon: "/javascript.png",
+    icon: jsIcon,
     monacoLang: "javascript",
   },
   python: {
     name: "Python",
-    icon: "/python.png",
+    icon: pyIcon,
     monacoLang: "python",
   },
   java: {
     name: "Java",
-    icon: "/java.png",
+    icon: javaIcon,
     monacoLang: "java",
   },
 };
