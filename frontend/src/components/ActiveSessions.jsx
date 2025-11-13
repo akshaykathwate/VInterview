@@ -14,9 +14,7 @@ function ActiveSessions({ sessions, isLoading, isUserInSession }) {
   return (
     <div className="lg:col-span-2 card bg-base-100 border-2 border-primary/20 hover:border-primary/30 h-full">
       <div className="card-body">
-        {/* HEADERS SECTION */}
         <div className="flex items-center justify-between mb-6">
-          {/* TITLE AND ICON */}
           <div className="flex items-center gap-3">
             <div className="p-2 bg-gradient-to-br from-primary to-secondary rounded-xl">
               <ZapIcon className="size-5" />
@@ -32,7 +30,6 @@ function ActiveSessions({ sessions, isLoading, isUserInSession }) {
           </div>
         </div>
 
-        {/* SESSIONS LIST */}
         <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2">
           {isLoading ? (
             <div className="flex items-center justify-center py-20">

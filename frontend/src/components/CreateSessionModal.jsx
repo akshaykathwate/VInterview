@@ -1,5 +1,5 @@
 import { Code2Icon, LoaderIcon, PlusIcon } from "lucide-react";
-import { PROBLEMS } from "../data/problems";
+import { PROBLEMS } from "../data/problems.js";
 
 function CreateSessionModal({
   isOpen,
@@ -19,7 +19,7 @@ function CreateSessionModal({
         <h3 className="font-bold text-2xl mb-6">Create New Session</h3>
 
         <div className="space-y-8">
-          {/* PROBLEM SELECTION */}
+
           <div className="space-y-2">
             <label className="label">
               <span className="label-text font-semibold">Select Problem</span>
@@ -51,7 +51,6 @@ function CreateSessionModal({
             </select>
           </div>
 
-          {/* ROOM SUMMARY */}
           {roomConfig.problem && (
             <div className="alert alert-success">
               <Code2Icon className="size-5" />

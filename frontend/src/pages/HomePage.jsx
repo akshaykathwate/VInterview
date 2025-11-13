@@ -9,6 +9,7 @@ import {
   ZapIcon,
 } from "lucide-react";
 import { Link } from "react-router";
+import hero from "../assets/hero.png"
 
 function HomePage() {
   return (
@@ -99,7 +100,7 @@ function HomePage() {
 
           {/* Right Image */}
           <img
-            src="/hero.png"
+            src={hero}
             alt="CodeCollab Platform"
             className="w-full h-auto rounded-3xl shadow-2xl border-4 border-base-100 hover:scale-105 transition-transform duration-500"
           />
