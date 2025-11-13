@@ -40,7 +40,6 @@ function VideoCallUI({ chatClient, channel }) {
   return (
     <div className="h-full flex gap-3 relative str-video">
       <div className="flex-1 flex flex-col gap-3">
-        {/* Participants count badge and Chat Toggle */}
         <div className="flex items-center justify-between gap-2 bg-base-100 p-3 rounded-lg shadow">
           <div className="flex items-center gap-2">
             <UsersIcon className="w-5 h-5 text-primary" />
@@ -72,7 +71,6 @@ function VideoCallUI({ chatClient, channel }) {
         </div>
       </div>
 
-      {/* CHAT SECTION */}
 
       {chatClient && channel && (
         <div
