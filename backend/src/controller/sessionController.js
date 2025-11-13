@@ -13,12 +13,10 @@ export async function createSession(req, res) {
         .json({ message: "Problem and difficulty are required" });
     }
 
-    // generate a unique call id for stream video
     const callId = `session_${Date.now()}_${Math.random()
       .toString(36)
       .substring(7)}`;
 
-    // create session in db
     const session = await Session.create({
       problem,
       difficulty,
@@ -34,7 +32,7 @@ export async function createSession(req, res) {
       },
     });
 
-    // chat messaging
+    // Chat messaging feature
     const channel = chatClient.channel("messaging", callId, {
       name: `${problem} Session`,
       created_by_id: clerkId,
