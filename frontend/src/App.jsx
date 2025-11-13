@@ -30,6 +30,10 @@ function App() {
           path="/problems/:id"
           element={isSignedIn ? <ProblemPage /> : <Navigate to="/" />}
         />
+        <Route
+          path="/session/:id"
+          element={isSignedIn ? <SessionPage /> : <Navigate to={"/"} />}
+        />
       </Routes>
 
       <Toaster position="top-right" />
