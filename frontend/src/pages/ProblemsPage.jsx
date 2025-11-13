@@ -1,7 +1,6 @@
+import { ChevronRightIcon, Code2Icon } from "lucide-react";
 import { Link } from "react-router";
 import Navbar from "../components/Navbar";
-
-import { ChevronRightIcon, Code2Icon } from "lucide-react";
 import { PROBLEMS } from "../data/problems";
 import { getDifficultyBadgeClass } from "../lib/utils";
 
@@ -23,7 +22,6 @@ function ProblemsPage() {
       <Navbar />
 
       <div className="max-w-6xl mx-auto px-4 py-12">
-        
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-2">Practice Problems</h1>
           <p className="text-base-content/70">
@@ -31,7 +29,6 @@ function ProblemsPage() {
           </p>
         </div>
 
-      
         <div className="space-y-4">
           {problems.map((problem) => (
             <Link
@@ -41,7 +38,6 @@ function ProblemsPage() {
             >
               <div className="card-body">
                 <div className="flex items-center justify-between gap-4">
-                  
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -68,7 +64,6 @@ function ProblemsPage() {
                       {problem.description.text}
                     </p>
                   </div>
-                  
 
                   <div className="flex items-center gap-2 text-primary">
                     <span className="font-medium">Solve</span>
