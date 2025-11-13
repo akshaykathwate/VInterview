@@ -5,7 +5,7 @@ import DashBoard from "./pages/DashBoard";
 import HomePage from "./pages/HomePage";
 import ProblemPage from "./pages/ProblemPage";
 import ProblemsPage from "./pages/ProblemsPage";
-import SessionPage from './pages/SessionPage';
+import SessionPage from "./pages/SessionPage";
 
 function App() {
   const { isSignedIn, isLoaded } = useUser();
