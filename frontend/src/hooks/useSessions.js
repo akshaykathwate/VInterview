@@ -10,7 +10,6 @@ export const useCreateSession = () => {
     onError: (error) =>
       toast.error(error.response?.data?.message || "Failed to create room"),
   });
-
   return result;
 };
 
@@ -19,7 +18,6 @@ export const useActiveSessions = () => {
     queryKey: ["activeSessions"],
     queryFn: sessionApi.getActiveSessions,
   });
-
   return result;
 };
 
@@ -28,7 +26,6 @@ export const useMyRecentSessions = () => {
     queryKey: ["myRecentSessions"],
     queryFn: sessionApi.getMyRecentSessions,
   });
-
   return result;
 };
 
@@ -37,9 +34,8 @@ export const useSessionById = (id) => {
     queryKey: ["session", id],
     queryFn: () => sessionApi.getSessionById(id),
     enabled: !!id,
-    refetchInterval: 5000, 
+    refetchInterval: 5000,
   });
-
   return result;
 };
 
@@ -51,7 +47,6 @@ export const useJoinSession = () => {
     onError: (error) =>
       toast.error(error.response?.data?.message || "Failed to join session"),
   });
-
   return result;
 };
 
@@ -63,6 +58,5 @@ export const useEndSession = () => {
     onError: (error) =>
       toast.error(error.response?.data?.message || "Failed to end session"),
   });
-
   return result;
 };
